@@ -12,4 +12,5 @@ class SentenceController < ApplicationController
 
 
 
+
 end
