@@ -4,10 +4,12 @@
 <h2>Startup advice for people who need it</h2>
 
 	<div class="well">
-	<% @sentence.each do |sentence| %>
-		<h3><%= sentence.advice %></h3>
-		<p><%= sentence.twitterhandle %></p>
-	<% end %>
+		<h3><%= @sentence.advice %></h3>
+		<p><%= @sentence.twitterhandle %></p>
+
+	<div class="pull-right">
+		<%= link_to("Not Enough? I need more advice!", {:action => 'next'}, :class => 'next-link') %>
+	</div>
 
 	</div>
 </div>
