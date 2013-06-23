@@ -1,0 +1,39 @@
+<div class="container">
+
+<!-- flash message goes here -->
+<% if !flash[:notice].blank? %>
+	<div class="alert">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+<!-- end of flash message goes here -->
+
+	<h1>Add your Wisdom</h1>
+
+	<p><%= link_to("<<Back to Homepage", {:action => 'index'}, :class => 'next-link') %>
+	<!-- Creating the form -->
+	<div class="span10 well">
+
+		<% @sentence.each do |sentence| %>
+		<p>
+		<%= sentence.name %>
+		<%= sentence.email %>
+		<%= sentence.twitterhandle %>
+		</p>
+		<p>
+		<%= sentence.advice %>
+		</p>
+		<p>
+		<%= sentence.created_at %>
+		<%= sentence.updated_at %>
+		<%= sentence.id %>
+		</p>
+	<p>
+		<%= link_to("Edit", {:action => 'edit123', :id => sentence.id}) %>
+	</p>
+
+
+		<% end %>
+	</div>
+</div>
+

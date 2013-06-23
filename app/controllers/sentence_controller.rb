@@ -10,7 +10,7 @@ class SentenceController < ApplicationController
   end
 
   def list123
-    @sentence = Sentence.all
+    @sentence = Sentence.order("created_at DESC")
   end
 
   def new123
