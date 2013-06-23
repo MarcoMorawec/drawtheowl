@@ -30,6 +30,8 @@
 		</p>
 	<p>
 		<%= link_to("Edit", {:action => 'edit123', :id => sentence.id}) %>
+		<%= link_to("Delete", {:action => 'destroy', :id => sentence.id}, confirm: "Are you sure you want to delete?") %>
+
 	</p>
 
 

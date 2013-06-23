@@ -41,6 +41,12 @@ class SentenceController < ApplicationController
     end
   end
 
+  def destroy
+    @sentence = Sentence.find(params[:id]).destroy
+    flash[:notice] = "Your Advice is gone!"
+    redirect_to(:action => 'list123')
+  end
+
 
 
 end
