@@ -9,10 +9,21 @@ class SentenceController < ApplicationController
   		render ('index')
   end
 
-  def create
+  def new123
+    @sentence = Sentence.new(params[:sentence])
   end
 
-  
+  def create
+  	@sentence = Sentence.new(params[:sentence])
+    if @sentence.save
+      flash[:notice] = "We saved your sentence!"
+      redirect_to(:action => 'index')
+    else
+      render('new123')
+    end
+  end
+
+
 
 
 

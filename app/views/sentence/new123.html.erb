@@ -1,0 +1,24 @@
+<div class="container">
+
+	<h1>Add your Wisdom</h1>
+
+	<!-- Creating the form -->
+	<div class="span5 well">
+		<%= form_for(:sentence, :url => {:action => 'create'}) do |f| %>
+			<%= f.label :name, "Your Name" %>
+				<%= f.text_field(:name) %>
+			
+			<%= f.label :twitterhandle, "Your Twitterhandle" %>
+				<%= f.text_field(:twitterhandle) %>
+			
+			<%= f.label :email, "Your email" %>
+				<%= f.text_field(:email) %>
+
+			<%= f.label :advice, "Your Advice" %>
+				<%= f.text_field(:advice) %>
+
+			<%= submit_tag("Send your Advice") %>
+		<% end %>
+	</div>
+</div>
+

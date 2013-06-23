@@ -1,5 +1,13 @@
 <div class="container">
 
+<!-- flash message goes here -->
+<% if !flash[:notice].blank? %>
+	<div class="alert">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+<!-- end of flash message goes here -->
+
 <h1>Draw the Fucking Owl</h1>
 <h3>Quick Startup advice for people who want to work for a startup</h3>
 
