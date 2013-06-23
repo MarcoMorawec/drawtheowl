@@ -9,6 +9,10 @@ class SentenceController < ApplicationController
   		render ('index')
   end
 
+  def create
+  end
+
+  
 
 
 
