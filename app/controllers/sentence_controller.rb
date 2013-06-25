@@ -2,12 +2,10 @@ class SentenceController < ApplicationController
   
   def index
   	@sentence = Sentence.first(:offset => rand(Sentence.count))
+    @sentence1 = Sentence.new(params[:sentence])
   end
 
-  def next
-  	@sentence = Sentence.first(:offset => rand(Sentence.count))
-  		render ('index')
-  end
+  
 
   def list123
     @sentence = Sentence.order("created_at DESC")
