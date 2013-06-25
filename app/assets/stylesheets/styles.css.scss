@@ -5,11 +5,6 @@ body {
   background-color: #ffffff;
 }
 
-.next-link {
-	color: red;
-
-}
-
 .box {
 	padding: 5%;
 	margin-bottom: 10%;
@@ -37,8 +32,18 @@ body {
  	font-size: 18px;
  	font-weight: 500;
  }
-  .twitter-link:hover {
+ .twitter-link:hover {
 	text-decoration: none;
+ }
+
+ .next-link {
+ 	font-size: 22px;
+ 	font-weight: 500;
+ 	color: #DA4E49;
+ }
+ .next-link:hover {
+	text-decoration: none;
+	color: #BD362F;
  }
 
  /*FONTS*/
