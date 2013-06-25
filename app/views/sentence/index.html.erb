@@ -21,6 +21,11 @@
 		<%= link_to("Not Enough? I need more advice!", {:action => 'index'}, :class => 'next-link') %>
 	</div>
 
+
+	<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#advice">
+    Give Advice
+    </button>
+    <div id="advice" class="collapse">
 	<div class="well">
 		<div class="row">
 			<div class="span4">
@@ -45,6 +50,7 @@
 				<% end %>
 			</div>
 		</div>
+	</div>
 	</div>
 
 </div>
