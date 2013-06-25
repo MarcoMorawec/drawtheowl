@@ -9,16 +9,43 @@
 <!-- end of flash message goes here -->
 
 <h1>Draw the Fucking Owl</h1>
-<h3>Quick Startup advice for people who want to work for a startup</h3>
+<h3>Good fucking Startup advice for people who love Startups</h3>
 
 	<div class="well">
 		<h1><%= @sentence.advice %></h1>
-		<p><%= @sentence.twitterhandle %></p>
+		<p class="span1"><%= link_to("#{@sentence.twitterhandle}", "http://www.twitter.com/#{@sentence.twitterhandle}", :target => '_blank', :class => 'twitter-link') %></p>
 
 	</div>
 
 	<div class="pull-right">
-		<%= link_to("Not Enough? I need more advice!", {:action => 'next'}, :class => 'next-link') %>
+		<%= link_to("Not Enough? I need more advice!", {:action => 'index'}, :class => 'next-link') %>
 	</div>
+
+	<div class="well">
+		<div class="row">
+			<div class="span4">
+				<h3>Have some fucking good advice?</h3>
+			</div>
+			<div class="span3">
+				<h5>Great! We review every piece of advice before we post it to make sure it's really fucking good.</h5>
+			</div>
+			<div class="span4">
+				<%= form_for(:sentence, {:action => 'create'}) do |f| %>
+
+					
+					<%= f.label :twitterhandle, "Your Twitterhandle" %>
+						<%= f.text_field(:twitterhandle) %>
+					
+
+
+					<%= f.label :advice, "Your Advice" %>
+						<%= f.text_field(:advice) %>
+					</br>
+					<%= submit_tag("Send your Advice") %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
 </div>
 
