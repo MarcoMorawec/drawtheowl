@@ -4,7 +4,7 @@
     </button>
 </div>
     <div id="advice" class="collapse">
-		<div class="wel">
+		<div class="well">
 			<div class="row">
 				<div class="span4">
 					<h3>Have some fucking good advice?</h3>
@@ -13,7 +13,7 @@
 					<h5>Great! We review every piece of advice before we post it to make sure it's really fucking good.</h5>
 				</div>
 				<div class="span4">
-					<%= form_for(:sentence1, {:action => 'create'}) do |f| %>
+					<%= form_for(:sentence_home, :url => {:action => 'create_home'}) do |f| %>
 
 						
 						<%= f.label :twitterhandle, "Your Twitterhandle" %>
@@ -42,7 +42,7 @@
 
 <h1>Draw the Fucking Owl</h1>
 <h3>Good fucking Startup advice for people who love Startups</h3>
-<hr>
+<p class="hr">
 	<div class="box">
 		<h1 class="custom-h1"><%= @sentence.advice %></h1>
 		<p class="pull-right"><%= link_to("By #{@sentence.twitterhandle}", "http://www.twitter.com/#{@sentence.twitterhandle}", :target => '_blank', :class => 'twitter-link') %></p>

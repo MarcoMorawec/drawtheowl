@@ -1,8 +1,8 @@
 class SentenceController < ApplicationController
   
   def index
-  	@sentence = Sentence.first(:offset => rand(Sentence.count))
-    @sentence1 = Sentence.new(params[:sentence])
+  	@sentence = Sentence.first(:offset => rand(Sentence.count)) 
+    @sentence_home = Sentence.new(params[:sentence1])
   end
 
   
@@ -15,8 +15,18 @@ class SentenceController < ApplicationController
     @sentence = Sentence.new(params[:sentence])
   end
 
+  def create_home
+  	@sentence_home = Sentence.new(params[:sentence1])
+    if @sentence_home.save
+      flash[:notice] = "We saved your advice!"
+      redirect_to(:action => 'index')
+    else
+      render('new123')
+    end
+  end
+
   def create
-  	@sentence = Sentence.new(params[:sentence])
+    @sentence = Sentence.new(params[:sentence1])
     if @sentence.save
       flash[:notice] = "We saved your advice!"
       redirect_to(:action => 'index')
