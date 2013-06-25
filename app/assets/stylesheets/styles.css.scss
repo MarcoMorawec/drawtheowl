@@ -10,3 +10,48 @@ body {
 
 }
 
+.box {
+	padding: 5%;
+	margin-bottom: 10%;
+}
+
+.down {
+    background-repeat: no-repeat;
+    height: 14px;
+    left: 50%;
+    margin-left: -9px;
+    position: fixed;
+    top: 6px;
+    width: 19px;
+  }
+
+ hr {
+ 	background-color: transparent;
+    border: 1px dashed #333333;
+    height: 0;
+    margin: 25px 0;
+    width: 100%;
+ }
+
+ .twitter-link {
+ 	font-size: 18px;
+ 	font-weight: 500;
+ }
+  .twitter-link:hover {
+	text-decoration: none;
+ }
+
+ /*FONTS*/
+
+ .custom-h1 {
+ 	font-family: Helvetica Neue, sans-serif;
+ 	font-size: 84px;
+ 	font-weight: 300;
+ 	color: #333333;
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: -4px;
+    line-height: 85px;
+    margin-top: 25px;
+    text-shadow: 1px 1px 1px #FFFFFF;
+ }
