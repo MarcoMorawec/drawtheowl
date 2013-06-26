@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(:version => 20130623191258) do
   create_table "sentences", :force => true do |t|
     t.string   "name"
     t.string   "twitterhandle"
-    t.string   "email",                        :default => "",    :null => false
-    t.text     "advice",        :limit => 140
-    t.boolean  "visible",                      :default => false
-    t.datetime "created_at",                                      :null => false
-    t.datetime "updated_at",                                      :null => false
+    t.string   "email",         :default => "",    :null => false
+    t.text     "advice"
+    t.boolean  "visible",       :default => false
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
   end
 
 end

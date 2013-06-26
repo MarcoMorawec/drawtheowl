@@ -9,7 +9,7 @@ development:
   database: owl_development
   pool: 5
   host: localhost
-  username: owl_admin
+  username: Marco
   password:
 
 # Warning: The database defined as "test" will be erased and
@@ -21,7 +21,7 @@ test:
   database: owl_test
   pool: 5
   host: localhost
-  username: owl_admin
+  username: Marco
   password:
 
 production:
@@ -30,5 +30,5 @@ production:
   database: owl_production
   pool: 5
   host: localhost
-  username: owl_admin
+  username: Marco
   password:
