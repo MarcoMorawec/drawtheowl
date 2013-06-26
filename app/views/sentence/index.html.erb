@@ -31,7 +31,7 @@
 
 	<div class="box">
 		<h1 class="custom-h1"><%= @sentence.advice %></h1>
-		<p class="pull-right"><%= link_to("By #{@sentence.twitterhandle}", "http://www.twitter.com/#{@sentence.twitterhandle}", :target => '_blank', :class => 'twitter-link') %></p>
+		<p class="pull-right">By <%= link_to("#{@sentence.twitterhandle}", "http://www.twitter.com/#{@sentence.twitterhandle}", :target => '_blank', :class => 'twitter-link') %></p>
 
 	</div>
 
