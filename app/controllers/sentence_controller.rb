@@ -2,10 +2,9 @@ class SentenceController < ApplicationController
   
 
   def index
-    @sentence_visible = Sentence.where(:visible => true)
-    if @sentence_visible 
+
     @sentence = Sentence.first(:offset => rand(Sentence.count))
-    end
+    
     @sentence1 = Sentence.new(params[:sentence])
   end
 
