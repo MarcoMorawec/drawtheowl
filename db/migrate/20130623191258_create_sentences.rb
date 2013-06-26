@@ -5,7 +5,7 @@ class CreateSentences < ActiveRecord::Migration
     	t.string "twitterhandle"
     	t.string "email", :default => "", :null => false
     	t.text "advice", :limit => 140
-    	t.boolean "visible", :default => false, :null => false
+    	t.boolean "visible", :default => false
 
       t.timestamps
     end

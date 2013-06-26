@@ -1,8 +1,11 @@
-<div class="dow">
+<div class="container">
+<div class="down">
 	<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#advice">
     	<i class="icon-chevron-down"></i>
     </button>
 </div>
+</div>
+<div class="container">
     <div id="advice" class="collapse">
 		<div class="well">
 			<div class="row">
@@ -13,7 +16,7 @@
 					<h5>Great! We review every piece of advice before we post it to make sure it's really fucking good.</h5>
 				</div>
 				<div class="span4">
-					<%= form_for(:sentence_home, :url => {:action => 'create_home'}) do |f| %>
+					<%= form_for(:sentencehome, {:action => 'create'}) do |f| %>
 
 						
 						<%= f.label :twitterhandle, "Your Twitterhandle" %>
@@ -29,7 +32,9 @@
 				</div>
 			</div>
 		</div>
+		<p class="hr">
 	</div>
+</div>
 
 <div class="container">
 <!-- flash message goes here -->
@@ -39,17 +44,25 @@
 	</div>
 <% end %>
 <!-- end of flash message goes here -->
-
-<h1>Draw the Fucking Owl</h1>
-<h3>Good fucking Startup advice for people who love Startups</h3>
+<div class="row">
+	<div class="span2">
+		<%= image_tag('o.png') %>
+	</div>
+	<div class="span8 headline-box">
+		<h1>Draw the Fucking Owl</h1>
+		<h3>Good fucking Startup advice for people who love Startups</h3>
+	</div>
+</div>
 <p class="hr">
+
+
 	<div class="box">
 		<h1 class="custom-h1"><%= @sentence.advice %></h1>
 		<p class="pull-right"><%= link_to("By #{@sentence.twitterhandle}", "http://www.twitter.com/#{@sentence.twitterhandle}", :target => '_blank', :class => 'twitter-link') %></p>
 
 	</div>
 
-	<div class="pull-right">
+	<div class="pull-right link-box">
 		<%= link_to("Not enough, I need more advice!", {:action => 'index'}, :class => 'next-link') %>
 	</div>
 

@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20130623191258) do
     t.string   "twitterhandle"
     t.string   "email",                        :default => "",    :null => false
     t.text     "advice",        :limit => 140
-    t.boolean  "visible",                      :default => false, :null => false
+    t.boolean  "visible",                      :default => false
     t.datetime "created_at",                                      :null => false
     t.datetime "updated_at",                                      :null => false
   end

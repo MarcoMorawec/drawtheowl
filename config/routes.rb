@@ -1,5 +1,5 @@
 Drawtheowl::Application.routes.draw do
-  get "sentence/index"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

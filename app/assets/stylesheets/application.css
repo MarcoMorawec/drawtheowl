@@ -19,18 +19,22 @@
 body {
   background: url('bg.png') repeat scroll 0 0 transparent; 
   background-color: #ffffff;
+  padding-top: 50px;
 }
 
 .box {
 	padding: 5%;
 	margin-bottom: 10%;
 }
+.headline-box {
+	margin-top: 10px;
+}
+.link-box {
+	margin-bottom: 30px;
+}
 
 .down {
-    background-repeat: no-repeat;
-    height: 14px;
     left: 50%;
-    margin-left: -9px;
     position: fixed;
     top: 6px;
     width: 19px;
@@ -61,6 +65,17 @@ body {
 	text-decoration: none;
 	color: #BD362F;
  }
+ .footer-link {
+	text-decoration: none;
+	color: gray;
+}
+.no-link {
+	color: gray;
+}
+.no-link:hover {
+	color: gray;
+	text-decoration: none;
+}
 
  /*FONTS*/
 
