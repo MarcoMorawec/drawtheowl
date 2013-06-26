@@ -5,36 +5,9 @@
     </button>
 </div>
 </div>
-<div class="container">
-    <div id="advice" class="collapse">
-		<div class="well">
-			<div class="row">
-				<div class="span4">
-					<h3>Have some fucking good advice?</h3>
-				</div>
-				<div class="span3">
-					<h5>Great! We review every piece of advice before we post it to make sure it's really fucking good.</h5>
-				</div>
-				<div class="span4">
-					<%= form_for(:sentencehome, {:action => 'create'}) do |f| %>
 
-						
-						<%= f.label :twitterhandle, "Your Twitterhandle" %>
-							<%= f.text_field(:twitterhandle) %>
-						
+<%=render 'new123' %>
 
-
-						<%= f.label :advice, "Your Advice" %>
-							<%= f.text_field(:advice) %>
-						</br>
-						<%= submit_tag("Send your Advice") %>
-					<% end %>
-				</div>
-			</div>
-		</div>
-		<p class="hr">
-	</div>
-</div>
 
 <div class="container">
 <!-- flash message goes here -->
