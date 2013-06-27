@@ -1,4 +1,11 @@
 <div class="container">
+<!-- flash message goes here -->
+<% if !flash[:notice].blank? %>
+	<div class="alert">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+<!-- end of flash message goes here -->
 
 		<div class="well">
 			<div class="row">

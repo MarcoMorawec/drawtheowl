@@ -3,8 +3,8 @@ class Sentence < ActiveRecord::Base
 
 
 
-  #validates :twitterhandle, presence: true
-  #validates :advice, presence: true
+  validates :twitterhandle, presence: true
+  validates :advice, presence: true
   
 end
 
