@@ -11,16 +11,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130623191258) do
-
-  create_table "sentences", :force => true do |t|
-    t.string   "name"
-    t.string   "twitterhandle"
-    t.string   "email",         :default => "",    :null => false
-    t.text     "advice"
-    t.boolean  "visible",       :default => false
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
-  end
+ActiveRecord::Schema.define(:version => 0) do
 
 end
