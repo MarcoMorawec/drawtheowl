@@ -2,9 +2,11 @@ class SentenceController < ApplicationController
   
 
   def index
-
-    @sentence = Sentence.first(:offset => rand(Sentence.count))
-    
+    if Sentence.first != nil
+      @sentence = Sentence.first(:offset => rand(Sentence.count))
+    else   
+      @sentence = Sentence.new
+    end
     @sentence1 = Sentence.new(params[:sentence])
   end
 
