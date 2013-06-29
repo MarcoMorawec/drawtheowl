@@ -5,6 +5,19 @@
     </button>
 </div>
 </div>
+<script>
+	var sentences =  <%= raw @sentence.to_json.gsub("</", "<\\/") %>;
+</script>
+<script id="adviceTemplate" type="text/html">
+	<h1 class="custom-h1">{{advice}}</h1>
+	<p class="pull-right">By <a class="twitter-link" href="http://www.twitter.com/{{twitterhandle}}">{{twitterhandle}}</a>
+	</p>
+</script>
+<script id="noadviceTemplate" type="text/html">
+	<h1 class="custom-h1">Out of advice!  Consider contributing some of your own.</h1>
+	</p>
+</script>
+
 
 <%=render 'new123' %>
 
@@ -29,14 +42,12 @@
 <p class="hr">
 
 
-	<div class="box">
-		<h1 class="custom-h1"><%= @sentence.advice %></h1>
-		<p class="pull-right">By <%= link_to("#{@sentence.twitterhandle}", "http://www.twitter.com/#{@sentence.twitterhandle}", :target => '_blank', :class => 'twitter-link') %></p>
+	<div id="adviceBox" class="box">
 
 	</div>
 
 	<div class="pull-right link-box">
-		<%= link_to("Not enough, I need more advice!", {:action => 'index'}, :class => 'next-link') %>
+		<a id="next_advice" class="next-link" href="#">Not enough, I need more advice!</a>
 	</div>
 
 

@@ -17,3 +17,6 @@ tmp/*
 log/*
 tmp*
 log*
+
+# Ignore database.yml configuration
+/config/locales/database.yml

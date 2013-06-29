@@ -3,11 +3,25 @@ class SentenceController < ApplicationController
 
   def index
     if Sentence.first != nil
-      @sentence = Sentence.first(:offset => rand(Sentence.count))
+      # @sentence = Sentence.first(:offset => rand(Sentence.count))
+      @count = 500
+
+      if params[:offset]
+        @offset = params[:offset].to_i
+      else
+        @offset = 0
+      end
+
+      @sentence = Sentence.all(:limit=>@count, :offset=>@offset)
+      #if @sentece.length < @count
     else   
       @sentence = Sentence.new
     end
     @sentence1 = Sentence.new(params[:sentence])
+    respond_to do |format|
+      format.html
+      format.json { render :json => @sentence.to_json }
+    end
   end
 
   def list123
