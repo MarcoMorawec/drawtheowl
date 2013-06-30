@@ -14,6 +14,7 @@ class SentenceController < ApplicationController
 
       @sentence = Sentence.all(:limit=>@count, :offset=>@offset)
       #if @sentece.length < @count
+      @sentence.shuffle!
     else   
       @sentence = Sentence.new
     end
@@ -66,3 +67,4 @@ class SentenceController < ApplicationController
 
 
 end
+
