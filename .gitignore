@@ -20,3 +20,4 @@ log*
 
 # Ignore database.yml configuration
 /config/*.yml
+config/database.yml
