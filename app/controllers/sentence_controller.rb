@@ -39,7 +39,7 @@ class SentenceController < ApplicationController
       flash[:notice] = "Awesome! We got your advice!"
       redirect_to(:action => 'index')
     else
-      flash[:notice] = "If you want this to work, fill in both fields - got try again and make it work!"
+      flash[:notice] = "If you want this to work, fill in both fields and use 140 characters!"
       render('new123')
     end
   end
