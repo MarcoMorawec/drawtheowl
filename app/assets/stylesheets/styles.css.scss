@@ -5,19 +5,41 @@ body {
 }
 
 .box {
-	padding: 5%;
-	margin-bottom: 10%;
+	padding: 15px;
+	margin-bottom: 25px;
 }
 .headline-box {
 	margin-top: 10px;
 }
+
+/* fixing the link position only on desktop */
+@media only screen 
+and (min-width : 1224px) {
 .link-box {
-	margin-bottom: 30px;
+	margin-top: 180px;
+  margin-bottom: 30px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 400px;
+  width: 400px;
+}
+}
+
+/* fixing the link position only on desktop */
+@media only screen 
+and (min-width : 1224px) {
+.down {
+    left: 50%;
+    position: fixed;
+    top: 6px;
+    width: 19px;
+  }
 }
 
 .down {
     left: 50%;
-    position: fixed;
+    position: absolute;
     top: 6px;
     width: 19px;
   }
@@ -50,6 +72,7 @@ body {
  .footer-link {
 	text-decoration: none;
 	color: gray;
+  padding: 10px;
 }
 .no-link {
 	color: gray;
