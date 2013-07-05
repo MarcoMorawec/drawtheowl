@@ -9,6 +9,7 @@
 <!-- end of flash message goes here -->
 
 	<h1>Add your Wisdom</h1>
+	<h3> We currently have <%= @sentence.count %> pieces of wisdom </h3>
 
 	<p><%= link_to("<<Back to Homepage", {:action => 'index'}, :class => 'next-link') %>
 	<!-- Creating the form -->
