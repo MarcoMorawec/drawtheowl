@@ -1,9 +1,9 @@
 <div class="container">
-<div class="down">
-	<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#advice">
-    	<i class="icon-chevron-down"></i>
-    </button>
-</div>
+	<div class="down">
+		<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#advice">
+	    	<i class="icon-chevron-down"></i>
+	    </button>
+	</div>
 </div>
 <script>
 	var sentences =  <%= raw @sentence.to_json.gsub("</", "<\\/") %>;
@@ -14,7 +14,12 @@
 	</p>
 </script>
 <script id="noadviceTemplate" type="text/html">
-	<h1 class="custom-h1">We are out of fucking advice! You should add your own now</h1>
+	<h1 class="custom-h1 text-center">We are out of fucking advice!</h1>
+		<div class="text-center">
+			<button type="button" class="btn btn-danger btn-large" data-toggle="collapse" data-target="#advice">
+	    		<strong>Add Your Own Advice</strong>
+	    	</button>	    		
+	    </div>
 	</p>
 </script>
 
