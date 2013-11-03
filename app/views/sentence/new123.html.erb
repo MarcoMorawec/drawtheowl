@@ -1,5 +1,12 @@
 <div class="container">
-    <div id="advice" class="collapse">
+<!-- flash message goes here -->
+<% if !flash[:notice].blank? %>
+	<div class="alert">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+<!-- end of flash message goes here -->
+
 		<div class="well">
 			<div class="row">
 				<div class="span4 text-center">
@@ -20,12 +27,14 @@
 						<%= f.label :advice, "Your Advice (140 Characters Limit)" %>
 							<%= f.text_area :advice, :rows => 3, :placeholder => 'e.g. Ship early and fucking often!'  %>
 							<br/>
-						<%= submit_tag("Send your Advice", :class => "btn btn-danger") %>
+						<%= submit_tag("Send your Advice", :class => "btn btn-danger") %> |
+						<%= link_to 'Or Return Home', root_path, :class => "" %>
 					<% end %>
 				</div>
+
 			</div>
 		</div>
 		<p class="hr">
-	</div>
+
 </div>
 
