@@ -17,11 +17,11 @@
 					<h4>We review every piece of advice before we post it and check if it's really fucking good.</h4>
 					<h4>So make sure what you post is solid.</h4>
 				</div>
-				<div class="span4">
+				<div class="span4 pull-right">
 					<%= form_for(:sentence1, :url => {:action => 'create'}) do |f| %>
 						
 						<%= f.label :twitterhandle, "Your Twitterhandle" %>
-							<%= f.text_field :twitterhandle, :placeholder => '@YourTwitterhandle' %>
+							<%= f.text_field :twitterhandle, :placeholder => '@JustinBieber' %>
 						
 
 						<%= f.label :advice, "Your Advice (140 Characters Limit)" %>
