@@ -2,12 +2,13 @@
     <div id="advice" class="collapse">
 		<div class="well">
 			<div class="row">
-				<div class="span4">
-					<h2 class="text-center">Have Some Good Advice?</h2>
+				<div class="span4 text-center">
+					<h2>Have Some Good Advice?</h2>
+					<h3>Share it with the world!</h3>
 				</div>
 				<div class="span3">
-					<h4>Great!</h4>
-					<h4>We review every piece of advice before we post it to make sure it's really fucking good. So make sure what you post is solid.</h4>
+					<h4>We review every piece of advice before we post it and check if it's really fucking good.</h4>
+					<h4>So make sure what you post is solid.</h4>
 				</div>
 				<div class="span4">
 					<%= form_for(:sentence1, :url => {:action => 'create'}) do |f| %>
@@ -18,7 +19,7 @@
 
 						<%= f.label :advice, "Your Advice (140 Characters Limit)" %>
 							<%= f.text_area :advice, :rows => 3  %>
-
+							<br/>
 						<%= submit_tag("Send your Advice", :class => "btn btn-danger") %>
 					<% end %>
 				</div>
