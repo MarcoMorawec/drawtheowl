@@ -28,20 +28,20 @@ and (min-width : 1224px) {
 
 /* fixing the link position only on desktop */
 @media only screen 
-and (min-width : 1224px) {
+and (min-width: 1224px) {
 .down {
-    left: 50%;
-    position: fixed;
+    position: absolute;
+    left: 42%;
     top: 6px;
-    width: 19px;
+ 
   }
 }
 
 .down {
-    left: 50%;
     position: absolute;
+    left: 42%;    
     top: 6px;
-    width: 19px;
+
   }
 
  .hr {
