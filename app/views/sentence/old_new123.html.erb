@@ -16,7 +16,7 @@
 					<h5>Great!</h5>
 					<h5>We review every piece of advice before we post it to make sure it's really fucking good. So make sure what you post is solid.</h5>
 				</div>
-				<div class="span4">
+				<div class="span12">
 					<%= form_for(:sentence1, :url => {:action => 'create'}) do |f| %>
 						
 						<%= f.label :twitterhandle, "Your Twitterhandle" %>
@@ -25,6 +25,7 @@
 
 						<%= f.label :advice, "Your Advice" %>
 							<%= f.text_field(:advice) %>
+						<br/>
 
 						<%= submit_tag("Send your Advice", :class => "btn btn-danger") %>
 					<% end %>

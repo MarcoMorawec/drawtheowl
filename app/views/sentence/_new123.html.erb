@@ -3,11 +3,11 @@
 		<div class="well">
 			<div class="row">
 				<div class="span4">
-					<h3>Have some good advice?</h3>
+					<h2 class="text-center">Have Some Good Advice?</h2>
 				</div>
 				<div class="span3">
-					<h5>Great!</h5>
-					<h5>We review every piece of advice before we post it to make sure it's really fucking good. So make sure what you post is solid.</h5>
+					<h4>Great!</h4>
+					<h4>We review every piece of advice before we post it to make sure it's really fucking good. So make sure what you post is solid.</h4>
 				</div>
 				<div class="span4">
 					<%= form_for(:sentence1, :url => {:action => 'create'}) do |f| %>
@@ -17,7 +17,7 @@
 						
 
 						<%= f.label :advice, "Your Advice (140 Characters Limit)" %>
-							<%= f.text_field(:advice) %>
+							<%= f.text_area :advice, :rows => 3  %>
 
 						<%= submit_tag("Send your Advice", :class => "btn btn-danger") %>
 					<% end %>
